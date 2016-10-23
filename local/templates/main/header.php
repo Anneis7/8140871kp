@@ -1,0 +1,91 @@
+<?if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
+?>
+<?use Bitrix\Main\Localization\Loc;
+use Bitrix\Main\Page\Asset;
+Loc::loadMessages(__FILE__);?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--
+        Template 2046 Blue Flame
+        by www.tooplate.com
+    -->
+    <title><?$APPLICATION->ShowTitle();?></title>
+    <?$APPLICATION->ShowHead();?>
+    <?Asset::getInstance()->
+    addCss(SITE_TEMPLATE_PATH."/_include/css/nivo-slider.css");?>
+
+    <?Asset::getInstance()->
+    addJs(SITE_TEMPLATE_PATH."/_include/js/jquery.min.js", true);?>
+    <?Asset::getInstance()->
+    addJs(SITE_TEMPLATE_PATH."/_include/js/jquery.nivo.slider.js", true);?>
+
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('#slider').nivoSlider({
+                effect:'random',
+                slices:15,
+                animSpeed:500,
+                pauseTime:3000,
+                startSlide:0, //Set starting Slide (0 index)
+                directionNav:false,
+                directionNavHide:false, //Only show on hover
+                controlNav:false, //1,2,3...
+                controlNavThumbs:false, //Use thumbnails for Control Nav
+                pauseOnHover:true, //Stop animation while hovering
+                manualAdvance:false, //Force manual transitions
+                captionOpacity:0.8, //Universal caption opacity
+                beforeChange: function(){},
+                afterChange: function(){},
+                slideshowEnd: function(){} //Triggers after all slides have been shown
+            });
+        });
+    </script>
+
+</head>
+<body>
+<?$APPLICATION->ShowPanel();?>
+<div id="tooplate_body_wrapper">
+    <div id="tooplate_wrapper">
+
+        <div id="tooplate_header">
+            <div id="site_title">
+                <?if(!CSite::InDir('/')):?><a href="/"><?endif;?>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "COMPONENT_TEMPLATE" => ".default",
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => SITE_TEMPLATE_PATH."/include_areas/logo.php"
+                        )
+                    );?>
+                    <?if(!CSite::InDir('/')):?></a><?endif;?>
+                <h1><a href="#">Blue Flame Template</a></h1>
+            </div>
+            <div id="tooplate_menu">
+                <ul>
+                    <li><a href="index.html" class="current">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div> <!-- end of tooplate_menu -->
+        </div> <!-- end of forever header -->
+        <div id="tooplate_main_top"></div>
+        <div id="tooplate_middle">
+            <div id="slider">
+                <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/images/slideshow/01.jpg" alt="Slide 01" title="Phasellus aliquet viverra posuere." /></a>
+                <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/images/slideshow/02.jpg" alt="Slide 02" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." /></a>
+                <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/images/slideshow/03.jpg" alt="Slide 03" title="Suspendisse sit amet enim elit. Curabitur tempor consequat." /></a>
+                <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/images/slideshow/04.jpg" alt="Slide 04" title="Nulla faucibus luctus quam eget placerat." /></a>
+                <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/images/slideshow/05.jpg" alt="Slide 05" title="Nullam ante leo, consectetur eget adipiscing et." /></a>
+            </div>
+        </div> <!-- end of middle -->
+    </div> <!-- end of forever wrapper -->
+</div> <!-- end of forever body wrapper -->
+
