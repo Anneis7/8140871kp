@@ -66,9 +66,9 @@ Loc::loadMessages(__FILE__);?>
         <div id="tooplate_main_top"></div>
         <div id="tooplate_middle">
             <div id="slider">
-                <a href="#"><img src="images/slideshow/01.JPG" alt="Slide 01" title="Phasellus aliquet viverra posuere." /></a>
-                <a href="#"><img src="images/slideshow/02.JPG" alt="Slide 02" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." /></a>
-                <a href="#"><img src="images/slideshow/03.JPG" alt="Slide 03" title="Suspendisse sit amet enim elit. Curabitur tempor consequat." /></a>
+                <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/images/slideshow/01.JPG" alt="Slide 01" title="Phasellus aliquet viverra posuere." /></a>
+                <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/images/slideshow/02.JPG" alt="Slide 02" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." /></a>
+                <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/images/slideshow/03.JPG" alt="Slide 03" title="Suspendisse sit amet enim elit. Curabitur tempor consequat." /></a>
             </div>
         </div> <!-- end of middle -->
     </div> <!-- end of forever wrapper -->
