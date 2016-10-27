@@ -51,20 +51,7 @@ Loc::loadMessages(__FILE__);?>
 
         <div id="tooplate_header">
             <div id="site_title">
-                <?if(!CSite::InDir('/')):?><a href="/"><?endif;?>
-                    <?$APPLICATION->IncludeComponent(
-                        "bitrix:main.include",
-                        "",
-                        Array(
-                            "COMPONENT_TEMPLATE" => ".default",
-                            "AREA_FILE_SHOW" => "file",
-                            "AREA_FILE_SUFFIX" => "inc",
-                            "EDIT_TEMPLATE" => "",
-                            "PATH" => SITE_TEMPLATE_PATH."/include_areas/logo.php"
-                        )
-                    );?>
-                    <?if(!CSite::InDir('/')):?></a><?endif;?>
-                <h1><a href="#">Blue Flame Template</a></h1>
+                <h1><a href="#">For Kids</a></h1>
             </div>
             <div id="tooplate_menu">
                 <ul>
@@ -79,11 +66,9 @@ Loc::loadMessages(__FILE__);?>
         <div id="tooplate_main_top"></div>
         <div id="tooplate_middle">
             <div id="slider">
-                <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/images/slideshow/01.jpg" alt="Slide 01" title="Phasellus aliquet viverra posuere." /></a>
-                <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/images/slideshow/02.jpg" alt="Slide 02" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." /></a>
-                <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/images/slideshow/03.jpg" alt="Slide 03" title="Suspendisse sit amet enim elit. Curabitur tempor consequat." /></a>
-                <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/images/slideshow/04.jpg" alt="Slide 04" title="Nulla faucibus luctus quam eget placerat." /></a>
-                <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/images/slideshow/05.jpg" alt="Slide 05" title="Nullam ante leo, consectetur eget adipiscing et." /></a>
+                <a href="#"><img src="images/slideshow/01.JPG" alt="Slide 01" title="Phasellus aliquet viverra posuere." /></a>
+                <a href="#"><img src="images/slideshow/02.JPG" alt="Slide 02" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." /></a>
+                <a href="#"><img src="images/slideshow/03.JPG" alt="Slide 03" title="Suspendisse sit amet enim elit. Curabitur tempor consequat." /></a>
             </div>
         </div> <!-- end of middle -->
     </div> <!-- end of forever wrapper -->
