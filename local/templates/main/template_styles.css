@@ -577,8 +577,8 @@ figure {
     position:absolute;
     top:0px;
     left:0px;
-    width: 860px;
-    height: 180px
+    width: 660px;
+    height: 80px
 }
 /* If an image is wrapped in a link */
 .nivoSlider a.nivo-imageLink {
