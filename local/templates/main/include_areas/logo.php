@@ -1,1 +1,1 @@
-<img src=<?=SITE_TEMPLATE_PATH;?>"/images/logo.png" alt="Novux" />
+<img src="<?=SITE_TEMPLATE_PATH;?>/images/logo.png" alt="" />
