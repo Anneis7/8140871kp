@@ -60,22 +60,25 @@ Loc::loadMessages(__FILE__);?>
                     <?if(!CSite::InDir('/')):?></a><?endif;?>
                 <!-- Logo -->
                 <!-- Begin Menu -->
-                <div id="menu-wrapper">
-                    <div id="smoothmenu1" class="ddsmoothmenu">
-                        <ul>
-                            <li><a href="index.html" class="selected">Home</a></li>
-                            <li><a href="_include/portfolio.html">Portfolio</a></li>
-                            <li><a href="_include/services.html">Services</a></li>
-                            <li><a href="_include/full-width.html">Others</a>
-                                <ul>
-                                    <li><a href="_include/full-width.html">Full Width Page</a></li>
-                                    <li><a href="_include/buttons.html">Buttons</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="_include/contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"topmenu", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "1",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "left",
+		"USE_EXT" => "Y",
+		"COMPONENT_TEMPLATE" => "topmenu"
+	),
+	false
+);?>
                 <!-- End Menu -->
             </div>
             <!-- End Header -->
