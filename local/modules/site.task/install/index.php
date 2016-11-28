@@ -14,7 +14,7 @@ IncludeModuleLangFile(__FILE__);
 парнера и именем модуля знак подчеркивания
 *Класс модуля должен быть наследником системного класса модулей
 Битрикс CModule*/
-Class miet_kpi extends CModule {
+Class site_task extends CModule {
     /*Обязательные свойства объекта модуля*/
     const MODULE_ID = "site.task";
     var $MODULE_ID = "site.task";
@@ -46,7 +46,7 @@ Class miet_kpi extends CModule {
        self::MODULE_ID, '\CompanyNamespace\Promotions\Connector',
        'OnBasketAdd');
         $em->registerEventHandler('sale', 'OnBasketUpdate',
-       self::MODULE_ID, '\CompanyNamespace\Promotions\Connector', 20
+       self::MODULE_ID, '\CompanyNamespace\Promotions\Connector',
        'OnBasketUpdate');
         */
         return true;
