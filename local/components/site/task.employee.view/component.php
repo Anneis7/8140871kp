@@ -1,13 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Annie
- * Date: 30.11.2016
- * Time: 22:44
- */
-?>
-
-<?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 ###Инициализация глобальных переменных Битрикс###
 global $DB;
@@ -67,6 +58,12 @@ if ($this->StartResultCache(false, array(($arParams["CACHE_GROUPS"] === "N"
     ###Получение списка показателей TASK для сотрудника###
     $arResult['ITEMS'] =
         TASK\TASKManager::GetTaskEmployee($arParams["USER_ID"]);
+
+    foreach($arResult['ITEMS'] as &$arTASK) {
+        $arValue = TASK\TASKManager::GetTASKEmployeeValue($arTASK["ID"], $arParams["USER_ID"], $_REQUEST['UF_PERIOD']);
+        $arTASK["TASK_ID"] = $arValue["ID"];
+        $arTASK["TASK_VALUE"] = $arValue["UF_VALUE"];
+    }
     ###Кэширование значения элементов массива $arResult###
     $this->SetResultCacheKeys(array(
         "ITEMS",
@@ -86,4 +83,3 @@ if (isset($arResult["ITEM"])) {
     return $arResult["ITEM"];
 }
 ###
-?>

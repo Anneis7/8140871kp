@@ -35,3 +35,4 @@ $arComponentParameters = array(
         )
     ),
 );
+?>
